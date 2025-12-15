@@ -1,0 +1,2215 @@
+/* Custom Fonts and Colors (DARK THEME) */
+:root {
+    --primary-red: #ffffff;
+    --dark-bg: #121212;
+    /* Very dark background for the overall page */
+    --text-color: #ffffff;
+    --secondary-text-color: #bbbbbb;
+    --box-bg: rgba(0, 0, 0, 0.7);
+    /* Slightly transparent dark background for content boxes */
+    --light-gray-box-bg: rgba(255, 255, 255, 0.05);
+    /* Lighter transparent background for boxes (left/right columns) */
+    --client-section-bg-color: #222222;
+    /* Specific dark gray for client section */
+    --gray-icon-color: #888888;
+    /* Gray color for stat icons */
+
+    /* Header/Nav Colors (From Image 2 Footer) */
+    --header-bg: #eeeeee;
+    --header-text: #333333;
+    --header-secondary-text: #666666;
+
+    /* New for this section: Text color as per screenshot */
+    --section-main-text: #ffffff;
+    --section-secondary-text: #bbbbbb;
+    /* Adjusted for readability */
+}
+/* Global Styles */
+body {
+  background-color: rgb(234, 231, 231);
+    /* Use the defined dark background variable */
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    padding-top: 80px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* --- CUSTOM HEADER/NAVIGATION (Responsive Adjustments) --- */
+.custom-header-nav {
+  
+    color: #000000;
+}
+
+.header-nav-col,
+.header-social-col {
+    font-size: 0.85rem;
+}
+
+.header-link {
+    color: black;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.header-link:hover,
+.header-link.active {
+    color: black;
+}
+
+.header-name {
+    font-weight: bold;
+    margin-bottom: 0;
+    color: black;
+}
+
+.header-title {
+    font-size: 0.85rem;
+    color: black;
+    margin-bottom: 0;
+}
+
+.header-social-icon {
+    color: black;
+    font-size: 1rem;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.header-social-icon:hover {
+    color: black
+}
+
+/* --- HERO SECTION (Responsive Adjustments) --- */
+.hero-section {
+    position: relative;
+    /* Adjusted height for better vertical centering */
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    margin-top: 50px;
+}
+
+.center-content {
+    /* Styles for the Top-Red, Bottom-Black Gradient Border/Ring */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Adjusted size */
+    padding: 40px 40px;
+
+    border-radius: 50%;
+
+    /* Keep original gradient border effect */
+    border: 3px solid transparent;
+    background:
+        linear-gradient(rgb(255, 254, 254), #b5b2b2) padding-box,
+        linear-gradient(to bottom,gray, #e8e4e4) border-box;
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+
+    /* Soft outer shadow (Red glow) */
+    box-shadow: 0 0 10px rgba(26, 18, 18, 0.8);
+
+    transition: all 0.5s ease-in-out;
+}
+
+.center-content:hover {
+    box-shadow: 0 0 50px rgba(27, 27, 27, 0.2), 0 0 120px rgba(90, 89, 89, 0.2);
+}
+
+.hero-section h1 {
+    /* Keep original gradient text effect */
+    background: linear-gradient(to bottom, #1e1e1e, #565454);
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-section p.lead {
+    /* Keep original gradient text effect */
+    background: linear-gradient(to bottom, #1f1f1f, #737171);
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+    margin-top: -10px;
+}
+
+.hire-me-btn {
+    background-color: rgb(102, 99, 99);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 30px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+/* --- BOTTOM CONTENT SECTION (Responsive Adjustments) --- */
+.bottom-section {
+    margin-top: 10rem;
+    position: relative;
+    z-index: 15;
+}
+
+.man-container {
+    background-color: var(--light-gray-box-bg);
+}
+
+/* Left Column Styling */
+.left-col {
+    border-radius: 10px;
+    color: var(--section-secondary-text);
+  
+    height: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.inner-content-padding {
+    /* General padding */
+    padding: 20px;
+}
+
+.section-title {
+    /* Gradient for titles */
+    background: linear-gradient(to right, #5a5a5a, black);
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.section-text {
+    color: rgb(0, 0, 0);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.service-list {
+    list-style: none;
+    padding-left: 0;
+    color: rgb(146, 146, 146);
+    font-size: 0.95rem;
+}
+
+.service-list li {
+    margin-bottom: 5px;
+}
+
+.service-list li::before {
+    content: '•';
+     color: rgb(146, 146, 146);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Center Column - Profile Image (Responsive Adjustments) */
+.center-col {
+    z-index: 20;
+    margin-top: -150px;
+    margin-bottom: 0;
+}
+
+.profile-image-container {
+    width: 400px !important;
+    height: 850px;
+    /* Chapel shape: rounded top, flat bottom */
+    border-radius: 50% 50% 0 0 / 180px 180px 0 0;
+
+    /* Gradient Updated (Red to White) */
+    background: linear-gradient(to bottom,  rgb(176, 175, 175) , #575555 );
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-top: 20rem !important;
+}
+
+
+/* Right Column Styling (Responsive Adjustments) */
+.right-col {
+    border-radius: 10px;
+    padding: 30px !important;
+    margin-bottom: 0;
+    height: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.stat-group {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.stat-item {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.stat-item:last-child {
+    margin-bottom: 0;
+}
+
+.stat-number {
+    /* Keep original gradient text effect */
+    background: linear-gradient(to right, #242424, gray);
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.stat-label {
+   color: rgb(146, 146, 146);
+    font-size: 0.9rem;
+    line-height: 1.2;
+    margin-top: -5px;
+}
+
+.stat-icon {
+    font-size: 2rem;
+  color: rgb(146, 146, 146);
+    position: relative;
+    top: 5px;
+    /* **Adjusted for smaller screens later** */
+}
+
+.stat-text-group {
+    /* Wrapper for number and label for better alignment */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* --- BOTTOM CONTENT SECTION (Responsive Adjustments) --- */
+.bottom-section {
+    /* Increased margin-top significantly to push the entire gray section down. 
+       Adjusting to a higher value like 25rem/30rem based on the image's height */
+    margin-top: 10em; /* Increased to push the gray section far down */
+    position: relative;
+    z-index: 15;
+}
+
+/* We DO NOT need to change .center-col styles here because 
+   the profile-image-container has an inline style in HTML, which you want to keep: 
+   style="margin-top:5rem !important;" 
+*/
+
+/* Center Column - Profile Image (Responsive Adjustments) */
+.center-col {
+    z-index: 20;
+    /* Keeping the original margin-top from your provided CSS, 
+       but the position is highly affected by the inline style you have. 
+       Let's stick to the previous value which works as an anchor. */
+    margin-top: -150px; 
+    margin-bottom: 0;
+}
+
+
+/* Client Logos Section */
+.client-section-bg {
+
+    /* Specific darker gray background */
+
+    position: relative;
+    z-index: 10;
+    /* Ensure it's above background icons but below the main content */
+    border-bottom-left-radius: 10px;
+    /* Add back border radius for the client section */
+    border-bottom-right-radius: 10px;
+    padding-top: 30px !important;
+    /* Adjust padding top */
+}
+
+.client-title {
+    color: black;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.logo-row {
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+}
+
+.client-icon {
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.client-icon:hover {
+    opacity: 1;
+}
+
+.client-logo-text {
+    font-size: 1.2rem;
+    color: black;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+}
+
+/* --- BACKGROUND ICONS (No Changes) --- */
+.bg-icon {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    opacity: 0.15;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+
+#icon-html5 {
+    background-image: url('html5.png');
+    width: 100px;
+    height: 100px;
+top:2%;
+    transform: rotate(15deg);
+    left: 20%;
+}
+
+#icon-css3 {
+    background-image: url('css.png');
+    top: 8%;
+    left: 65%;
+    transform: rotate(-20deg);
+}
+
+#icon-js {
+    background-image: url('js.png');
+    width: 100px;
+    height: 100px;
+    top: 6%;
+    right: 20%;
+    transform: rotate(40deg);
+}
+
+#icon-coreldraw {
+    background-image: url('coreldraw.png');
+    width: 100px;
+    height: 100px;
+    top: 8%;
+    right: 10%;
+    transform: rotate(-20deg);
+}
+
+#icon-xd {
+    background-image: url('css.png');
+    width: 180px;
+    height: 50px;
+    top: 6%;
+    left: 20%;
+
+    transform: rotate(-5deg);
+}
+
+#icon-tailwind {
+    background-image: url('tailwind.png');
+    width: 150px;
+ 
+left:65%;
+    transform: rotate(-15deg);
+}
+
+#icon-webflow {
+    background-image: url('webflow.png');
+    width: 150px;
+    top: 4%;
+    right: 5%;
+    transform: rotate(5deg);
+}
+
+#icon-bootstrap {
+    background-image: url('bootstrap.png');
+    width: 60px;
+    bottom: 96%;
+left:4%;
+    transform: rotate(-15deg);
+}
+
+#icon-canva {
+    background-image: url('canva.png');
+    width: 80px;
+    height: 80px;
+   top:8%;
+    right: 45%;
+    transform: rotate(-30deg);
+}
+
+#icon-framer {
+    background-image: url('adobe.png');
+    width: 60px;
+    height: 60px;
+    top:5%;
+    left: 5%;
+    opacity: 0.08;
+    transform: rotate(25deg);
+}
+
+
+
+
+#icon-figma-again {
+    background-image: url('figma.png');
+    width: 60px;
+    height: 60px;
+    top: 8%;
+    right: 85%;
+    transform: rotate(-45deg);
+}
+
+
+
+.right-col {
+
+    border-radius: 10px;
+    padding: 0 !important;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.stat-group {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* 1. Stat Item Container: Arrange the text block (left) and icon (right) */
+.stat-item {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    /* Space out the text group and the icon */
+    align-items: center;
+    /* Vertically align items in the center */
+
+}
+
+.stat-item:last-child {
+    margin-bottom: 0;
+}
+
+/* 2. Text Group: Number and Label Stacked */
+.stat-text-group {
+    /* Ensures the number and label behave as a single block on the left */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3. Stat Number Styling (Large, Red) */
+.stat-number {
+    color: var(--primary-red);
+    font-size: 2.5rem;
+    /* Make it large */
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 6px;
+    /* Space between number and label */
+    display: block;
+    /* Ensure it takes full width */
+}
+
+/* 4. Stat Label Styling (Small, Indented) */
+.stat-label {
+    color: var(--section-secondary-text);
+    /* Use a softer white/gray color for the label */
+    font-size: 0.9rem;
+    line-height: 1.2;
+    margin-bottom: 0;
+    /* Remove default paragraph margin */
+    /* Add a small indent/bullet dot to match the screenshot look */
+    padding-left: 10px;
+    position: relative;
+}
+
+.stat-label::before {
+    content: '•';
+    /* Small dot/bullet */
+    color: var(--section-secondary-text);
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2em;
+    /* Ensure it's visible */
+}
+
+/* 5. Icon Styling (Large, Gray, Aligned Right) */
+.stat-icon {
+    font-size: 2rem;
+    /* Make the icon large */
+    color: var(--gray-icon-color);
+  
+}
+
+/* Ensure the inner content padding is still applied */
+.inner-content-padding {
+    padding: 30px;
+}
+
+/* --- MY SKILLS SECTION --- */
+.skills-section {
+background-color: #eeeeee;
+    /* Dark background */
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+}
+
+.skills-title {
+    color: black;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.skills-grid {
+    display: grid;
+    /* 6 columns for desktop */
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    /* Space between items */
+    max-width: 1000px;
+    /* Limit the width of the grid */
+    margin: 0 auto;
+}
+
+.skill-item {
+    background-color: #ffffff;
+    /* Black background for each skill box */
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    /* Fixed height for consistent look */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.skill-icon {
+    width:80px;
+    /* Icon size */
+    height: 80px;
+    margin-top: 10px;
+    padding-top:5px !important;
+    object-fit: contain;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+.skill-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin: 0;
+    color: var(--secondary-text-color);
+    visibility: hidden;
+    /* Hide label as per screenshot */
+}
+
+/* Specific styling for the icons with background colors to match the image */
+.skill-item:nth-child(4) .skill-icon {
+    background-color: #3f3f3f;
+    border-radius: 10px;
+}
+
+/* Bootstrap */
+.skill-item:nth-child(5) .skill-icon {
+    background: linear-gradient(45deg, #00C4CC, #893CE9);
+    border-radius: 10px;
+}
+
+/* Canva */
+.skill-item:nth-child(6) .skill-icon {
+    background-color: #0F172A;
+}
+
+/* Tailwind */
+.skill-item:nth-child(7) .skill-icon {
+    background-color: #5d005d;
+    border-radius: 10px;
+}
+
+/* XD */
+.skill-item:nth-child(8) .skill-icon {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+}
+
+/* Figma */
+.skill-item:nth-child(10) .skill-icon {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+}
+
+/* GitHub */
+.skill-item:nth-child(11) .skill-icon {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+}
+
+/* Framer */
+.skill-item:nth-child(12) .skill-icon {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+}
+
+
+/* --- 2. Main Section Styling --- */
+.work-process-section {
+    background-color: var(--work-process-bg);
+    color: black;
+    padding-top: 50px; /* Adjust as needed */
+    padding-bottom: 100px !important;
+}
+
+.work-process-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.work-process-subtitle {
+    color:black;
+    font-size: 0.9rem;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.6;
+}
+
+/* --- 3. Card Base Styling and Transition --- */
+.work-card {
+    background-color:#ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    /* Card height ko 100% rakhen taake jab stagger ho to problem na ho */
+    height: 100%; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    
+    /* Smooth transition for hover and staggered effect */
+    transition: margin 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.work-process-cards .work-card-item:nth-child(even) .work-card {
+    margin-top: 40px; /* Card ko 40px neeche shift karen */
+}
+
+/* --- 5. Hover Effect (Upar Uthane ka Effect) --- */
+.work-card:hover {
+    /* Upar uthne ka common effect */
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+/* --- 6. Inner Card Styles --- */
+.card-title {
+    color: var(--work-card-title-color);
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-red); /* Red line */
+}
+
+.card-text {
+    color: var(--work-card-text-color);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+/* --- 2. Section and Column Layout --- */
+.contact-quote-section {
+   
+    min-height: 700px; /* Section ko kafi ooncha rakhen */
+    position: relative;
+    overflow: hidden; /* For containing the absolute positioning of the circle */
+}
+
+/* Left Column Styling (Black Background) */
+.contact-left-col {
+    background-color: black;
+ 
+    min-height: 700px;
+    position: relative; /* Circle positioning ke liye */
+}
+
+/* Right Column Styling (White/Light Background) */
+.contact-right-col {
+    
+    min-height: 700px;
+       background-color: white;
+    display: flex;
+    align-items: center; /* Content ko center mein karne ke liye */
+    padding: 0 210px;
+}
+
+/* --- 3. Left Circle Styling --- */
+.quote-circle-wrapper {
+    position: absolute;
+    top: 50%;
+
+    right: -53%; 
+  
+    transform: translateY(-50%);
+    width: 35vw; 
+    height: 35vw;
+    max-width: 650px; 
+    max-height: 650px; 
+    border-radius: 50%;
+    background-color: #ffffff;
+    /* background: linear-gradient(to bottom, var(--primary-red) 0%, #949090 100%); */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    
+    /* Content ko center mein karne ke liye */
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    text-align: center;
+    
+}
+.button-1{
+    background-color:var(--primary-red) !important;
+    border-radius: 30px !important;
+    padding-block: 15px !important;
+}
+.quote-circle {
+    padding: 20%;
+    /* Circle ke andar ka content ka style */
+}
+
+.circle-title {
+    color: black; /* Dark text color */
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.circle-text {
+    color: var(--header-secondary-text); /* Grayish text */
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.contact-link {
+    color: rgb(102, 167, 243);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* --- 4. Right Content Styling --- */
+.contact-content-box {
+    max-width: 450px;
+    margin-left: 50px; /* Center-right alignment ke liye */
+}
+
+.tag-line {
+    margin-bottom: 20px;
+}
+
+.tag-item {
+    color: var(--header-secondary-text);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-right: 15px;
+}
+
+.main-heading {
+    color: rgb(16, 16, 16);
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.description-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color:black;
+}
+
+/* Black Button Style */
+.btn-primary-dark {
+    display: inline-block;
+    background-color: var(--button-bg);
+    color:black;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary-dark:hover {
+    background-color: var(--primary-red); /* Hover par red ho jaye */
+}
+
+
+
+/* --- 2. Section and Typography Styling --- */
+.case-study-section {
+    background-color: var(--case-study-bg);
+    padding: 80px 0; /* Padding around the section */
+}
+
+.case-study-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+ 
+     color: black;
+    margin-bottom: 0.5rem;
+}
+
+.case-study-subtitle {
+    font-size: 1rem;
+    color: gray;
+    max-width: 500px; /* Title ke neeche chota dikhane ke liye */
+    margin: 0 0 3rem 0; /* Left-aligned text hai */
+    line-height: 1.6;
+}
+
+/* --- 3. Grid Item Styling (Uniform Size and Aspect Ratio) --- */
+.case-study-item {
+    position: relative;
+    overflow: hidden; 
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05); 
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    
+
+    padding-top: 50%; /* 16:9 aspect ratio */
+    height: 0; /* Original height ko zero kar den */
+}
+
+/* Ensure images fill the container without distorting the layout */
+.case-study-item img {
+    /* Image ko absolute position den taake woh padding-top se bani jagah mein fit ho jaye */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    
+    /* Image ko container mein fit karne ke liye */
+    object-fit: cover; 
+    /* Agar image ki aspect ratio container se mukhtalif hai to usay kaat kar (crop) fit karega */
+    
+    transition: transform 0.5s ease;
+}
+
+/* --- 4. Hover Effect (Same as before) --- */
+.case-study-item:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1); 
+}
+
+.case-study-item:hover img {
+    transform: scale(1.05); 
+}
+
+/* --- 2. Section and Typography Styling --- */
+.services-section {
+
+    padding: 80px 0;
+}
+
+.services-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+
+   color: black;
+    margin-bottom: 0.5rem;
+}
+
+.services-subtitle {
+    font-size: 1rem;
+    color: var(--gray-icon-color);
+    max-width: 700px;
+    margin: 0 auto 4rem auto;
+    line-height: 1.6;
+}
+
+/* --- 3. Service Card Styling --- */
+.service-card {
+    background-color:#ffffff; /* White background for the card */
+    padding: 30px;
+ 
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid var(--card-border-color); /* Light border */
+    min-height: 380px; /* Consistent height */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03); /* Subtle shadow */
+    border:1px solid rgb(90, 86, 86);
+    /* Hover Transitio   n */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* --- Hover Effect --- */
+.service-card:hover {
+    transform: translateY(-5px); /* Lift the card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+    border-color: var(--primary-red); /* Red border on hover */
+}
+
+/* --- Inner Card Elements --- */
+.icon-placeholder {
+    font-size: 3rem;
+ 
+    color: black;
+    margin-bottom: 20px;
+    height: 50px; /* To ensure icon space consistency */
+    display: block;
+}
+
+.service-card .card-title {
+
+    color: black;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.service-card .card-text {
+    color: black;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.read-more-link {
+  
+    color: rgb(132, 131, 131);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 10px; /* Padding for separation */
+    
+    transition: color 0.3s ease;
+}
+
+.read-more-link:hover {
+    color: black; /* Link turns red on hover */
+}
+/* --- Inner Card Elements --- */
+
+/* Updated Icon Styling */
+.icon-service {
+    font-size: 3rem;
+    /* Use the specified gray color for icons */
+    color: var(--gray-icon-color); 
+    margin-bottom: 20px;
+    height: 50px; 
+    display: block;
+}
+
+
+/* --- 2. Section and Typography Styling --- */
+.client-feedback-section {
+ 
+    padding: 80px 0;
+}
+
+.feedback-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    margin-bottom: 0.5rem;
+}
+
+.feedback-subtitle {
+    font-size: 1rem;
+    color: black;
+    max-width: 700px;
+    margin: 0 auto 4rem auto;
+    line-height: 1.6;
+}
+
+/* --- 3. Testimonial Container (Slider Layout) --- */
+.testimonial-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px; /* Content area ki zyada se zyada width */
+    margin: 0 auto;
+    padding: 0 50px; /* Arrows ke liye jagah */
+}
+
+.testimonial-content-wrapper {
+    flex-grow: 1;
+    text-align: center;
+    padding: 0 40px; /* Arrows aur text ke beech space */
+}
+
+/* --- Quote Icon --- */
+.quote-icon {
+    font-size: 3rem;
+    color:black !important;
+    margin-bottom: 30px;
+    opacity: 0.5; /* halka color */
+    transform: rotate(180deg); /* icon ko ulta kar diya gaya hai */
+}
+
+/* --- Testimonial Text --- */
+.testimonial-text {
+    font-size: 1.1rem;
+    color: var(--header-secondary-text);
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    line-height: 1.8;
+}
+
+/* --- Client Info --- */
+.client-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: black !important;
+    margin-bottom: 5px;
+}
+
+.client-designation {
+    font-size: 0.9rem;
+    color: black;
+    margin-bottom: 0;
+}
+
+/* --- Slider Arrows (Updated Style) --- */
+.slider-arrow {
+    background: none;
+    border: 1px solid var(--gray-icon-color); /* Halka border for visibility */
+    cursor: pointer;
+    font-size: 1.2rem; /* Icon size chota kiya */
+    color:black;
+    width: 40px; /* Width for circular shape */
+    height: 40px; /* Height for circular shape */
+    border-radius: 50%; /* Gol shape */
+    display: flex; /* Icon ko center karne ke liye */
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Padding remove ki */
+    transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+    color:black !important; /* Hover par red color */
+    border-color: black !important; /* Border bhi red ho jaye */
+}
+
+/* Arrows ke icons ka style, agar Font Awesome use ho raha hai */
+.slider-arrow i {
+    font-weight: 600; /* Thora halka icon */
+}
+
+/* --- 2. Section and Typography Styling --- */
+.client-feedback-section {
+    padding: 80px 0;
+}
+
+.feedback-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.feedback-subtitle {
+    font-size: 1rem;
+    color: var(--header-secondary-text);
+    max-width: 700px;
+    margin: 0 auto 4rem auto;
+    line-height: 1.6;
+}
+
+/* --- 3. Testimonial Container (Slider Layout) --- */
+.testimonial-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px; /* Content area ki zyada se zyada width */
+    margin: 0 auto;
+    padding: 0 50px; /* Arrows ke liye jagah */
+}
+
+/* New CSS for the Slider Track */
+.testimonial-slider-track {
+    position: relative;
+    overflow: hidden; /* Only show the active slide */
+    width: 100%;
+    text-align: center;
+    padding: 0 40px; /* Arrows aur text ke beech space */
+    min-height: 350px; /* Ensure space even if content is small */
+}
+
+/* New CSS for Individual Slides */
+.testimonial-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Smooth transition for slides */
+    text-align: center;
+}
+
+.testimonial-slide.active {
+    opacity: 1; /* Show the active slide */
+    position: relative; /* Take up space in the flow */
+}
+
+/* --- Quote Icon --- */
+.quote-icon {
+    font-size: 3rem;
+    color: var(--primary-red);
+    margin-bottom: 30px;
+    opacity: 0.5; /* halka color */
+    transform: rotate(180deg); /* icon ko ulta kar diya gaya hai */
+}
+
+/* --- Testimonial Text --- */
+.testimonial-text {
+    font-size: 1.1rem;
+    color: var(--header-secondary-text);
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    line-height: 1.8;
+}
+
+/* --- Client Info --- */
+.client-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-red);
+    margin-bottom: 5px;
+}
+
+.client-designation {
+    font-size: 0.9rem;
+    color: var(--gray-icon-color);
+    margin-bottom: 0;
+}
+
+/* --- Slider Arrows (Updated Style) --- */
+.slider-arrow {
+    background: none;
+    border: 1px solid var(--gray-icon-color); /* Halka border for visibility */
+    cursor: pointer;
+    font-size: 1.2rem; /* Icon size chota kiya */
+    color: var(--gray-icon-color);
+    width: 40px; /* Width for circular shape */
+    height: 40px; /* Height for circular shape */
+    border-radius: 50%; /* Gol shape */
+    display: flex; /* Icon ko center karne ke liye */
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Padding remove ki */
+    transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+    color: var(--primary-red); /* Hover par red color */
+    border-color: var(--primary-red); /* Border bhi red ho jaye */
+}
+
+/* Arrows ke icons ka style, agar Font Awesome use ho raha hai */
+.slider-arrow i {
+    font-weight: 600; /* Thora halka icon */
+}
+
+/* Arrow state for Disabled */
+.slider-arrow:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: var(--gray-icon-color);
+    color: var(--gray-icon-color);
+}
+/* --- 2. Main Footer Container --- */
+.main-footer {
+    background-color:rgb(26, 24, 24);
+    color: var(--text-color);
+}
+
+.footer-divider {
+    border-top: 1px solid var(--gray-icon-color);
+    opacity: 0.1; /* Halka divider line */
+    margin: 0;
+}
+
+
+.footer-contact-info {
+    padding-right: 50px;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.contact-text {
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Button Styling (Let's Work Together) */
+.btn-work-together {
+    display: inline-block;
+    background-color: 
+    var(--work-process-subtitle-color); /* Footer mein button ka background transparent/black hi rahega */
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    padding: 10px 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-work-together:hover {
+    background-color: var(--link-hover-color);
+    border-color: var(--link-hover-color);
+    color: var(--text-color);
+}
+
+/* Social/Contact Links */
+.footer-social-links .link-item {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.footer-social-links .link-item i {
+    color: var(--secondary-text-color);
+    margin-right: 15px;
+    font-size: 1.25rem;
+    width: 25px; /* Icons ko align karne ke liye */
+    text-align: center;
+}
+
+
+
+.info-box {
+    margin-bottom: 20px;
+}
+
+.info-icon {
+    font-size: 2rem;
+    color: var(--gray-icon-color);
+    margin-bottom: 10px;
+}
+
+.info-title {
+    font-size: 0.9rem;
+    color: var(--gray-icon-color);
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.info-icon:hover,
+.info-title:hover{
+    color:#ffffff !important;
+     transition: color 0.3s ease;
+    
+}
+
+.info-value {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+
+
+
+.name-text {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.role-text {
+    font-size: 0.8rem;
+    color: var(--gray-icon-color);
+}
+
+.footer-nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-nav-links a:hover {
+    color: var(--link-hover-color);
+}
+
+
+.year-text {
+    font-size: 0.9rem;
+    color: var(--gray-icon-color);
+    margin-bottom: 0;
+  
+}
+
+.center-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-image-container {
+    
+    margin-top: 0 !important; 
+}
+
+
+/* Fix: Reset excessive inline margin on stat icons */
+.stat-icon {
+    margin-right: 0 !important; 
+    font-size: 2.5rem; 
+}
+
+/* Base style for skills grid, using CSS Grid for better control */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Default for large screens */
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+@media (max-width: 575.98px) {
+    
+    body {
+        padding-top: 55px; /* Adjust padding for fixed header */
+    }
+
+    /* --- Header / Navigation --- */
+    .header-nav-col, 
+    .header-center-col,
+    .header-social-col {
+        width: 100%;
+        text-align: center !important;
+        margin-bottom: 5px; 
+    }
+    
+    .header-link {
+        margin: 0 5px; 
+        font-size: 0.8rem;
+    }
+    
+    /* --- Hero Section --- */
+    .hero-section {
+        height: 50vh; 
+        margin-top: 0;
+    }
+    
+    .center-content {
+        padding: 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem; 
+    }
+
+    .hero-section p.lead {
+        font-size: 1rem;
+    }
+
+    /* --- Bottom Section (Biography & Stats) --- */
+    .bottom-section {
+        margin-top: 2rem; 
+    }
+
+    .custom-row .left-col, .custom-row .right-col {
+        width: 100%; /* Full width stacking */
+        margin-bottom: 20px;
+    }
+    
+    .inner-content-padding {
+        padding: 20px !important; 
+        padding-left: 20px !important; /* Ensure left padding is normalized */
+    }
+    
+    .stat-item {
+        flex-direction: column; 
+        align-items: center;
+    }
+    
+    .stat-icon {
+        margin-top: 10px;
+    }
+
+    /* --- Skills Section --- */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 icons per row for very small screens */
+        gap: 10px;
+    }
+    .skill-icon {
+        max-height: 70px !important;
+        max-width: 70px !important;
+    }
+
+    /* --- Work Process, Case Study, Services --- */
+    .work-process-cards .col-md-6,
+    .case-study-grid .col-md-6,
+    .services-cards .col-md-6 {
+        width: 100%; /* All cards stack */
+    }
+ .contact-left-col{
+    display: none;
+ }
+    /* --- Contact Quote Section --- */
+    .contact-right-col {
+        width: 100%; /* Stack columns */
+        padding: 0;
+    }
+    
+    .quote-circle {
+        max-width: 100%;
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .contact-content-box {
+        padding: 30px;
+        text-align: center;
+    }
+    
+    .tag-line {
+        justify-content: center;
+    }
+    
+    /* --- Footer --- */
+    .footer-top .col-lg-8, .footer-top .col-lg-4,
+    .footer-info-boxes .col-lg-4,
+    .footer-bottom .col-lg-4 {
+        width: 100%;
+        text-align: center !important;
+        margin-bottom: 15px;
+    }
+    
+    .footer-nav-links a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    
+    /* --- Header / Navigation --- */
+    .header-nav-col, .header-social-col {
+        text-align: center !important;
+        margin-bottom: 10px;
+    }
+    .header-social-col {
+        /* Add some space between nav and social on stacked layout */
+        margin-top: 10px; 
+    }
+
+    /* --- Bottom Section (Biography & Stats) --- */
+    .bottom-section {
+        margin-top: 5rem;
+    }
+    
+    .center-col {
+        /* Hide the center image on Tablet (md) as per HTML classes */
+        display: none !important; 
+    }
+    
+    .left-col, .right-col {
+        width: 50%; /* Two columns side-by-side */
+    }
+    
+    .inner-content-padding {
+        padding: 30px !important; 
+        padding-left: 30px !important; 
+    }
+    
+    /* --- Skills Section --- */
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 icons per row */
+        gap: 20px;
+    }
+    
+    /* --- Work Process, Services --- */
+    .work-process-cards .col-md-6,
+    .services-cards .col-md-6 {
+        width: 50%; /* Two cards per row */
+    }
+    
+    /* --- Case Study (Projects) --- */
+    .case-study-grid .col-md-6 {
+        width: 50%; /* Two projects per row */
+    }
+
+    /* --- Contact Quote Section --- */
+    .contact-left-col {
+        width: 40%; /* Give more space to right column content */
+    }
+    .contact-right-col {
+        width: 60%;
+    }
+
+    /* --- Footer --- */
+    .footer-top .col-lg-8, .footer-top .col-lg-4 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .footer-info-boxes .col-md-4 {
+        width: 33.3333%;
+    }
+}
+
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    
+    /* --- Header / Navigation --- */
+    .header-link {
+        margin-right: 15px; /* Slightly tighter links */
+    }
+    
+    /* --- Bottom Section (Biography & Stats) --- */
+    .bottom-section {
+        margin-top: 8rem;
+    }
+    
+    .left-col {
+        /* Adjust padding for the 3-column layout on smaller desktops */
+        padding-left: 30px !important;
+    }
+
+    /* --- Skills Section --- */
+    .skills-grid {
+        grid-template-columns: repeat(5, 1fr); /* 5 icons per row */
+        gap: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Custom Fonts and Colors (DARK THEME) */
+
+
+
+
+/* ========================================================================= */
+/* --- MEDIA QUERIES FOR RESPONSIVENESS (Adjusted to SHOW image on small screens) --- */
+/* ========================================================================= */
+
+
+/* Extra Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+    /* Hide background icons */
+    #icon-html5, #icon-css3, #icon-js, #icon-coreldraw, #icon-xd, #icon-tailwind, #icon-webflow, #icon-bootstrap, #icon-canva, #icon-framer, #icon-figma-again {
+        display: none;
+    }
+    
+    /* KEY CHANGE: SHOW the center image column on xs screens */
+    .center-col {
+        display: flex !important; /* Force display on */
+        order: -1; /* Move it to the top */
+        margin-top: 0 !important;
+        margin-bottom: 20px;
+        width: 100%; /* Take full width */
+        justify-content: center;
+    }
+    
+    .profile-image-container {
+        width: 250px; /* Smaller size for mobile */
+        height: 350px;
+        border-radius: 50% 50% 0 0 / 120px 120px 0 0;
+    }
+    .profile-img {
+        margin-top: 8rem !important; /* Adjust image position in smaller container */
+    }
+
+
+    /* HEADER Adjustments */
+    .custom-header-nav .row > div {
+        text-align: center !important;
+    }
+
+    .header-link {
+        margin: 0 8px;
+    }
+
+    .header-social-icon {
+        margin-left: 8px;
+    }
+
+    /* HERO Section Adjustments */
+    .center-content {
+        padding: 25px 25px;
+        margin-top: 4rem;
+    }
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+    .hero-section p.lead {
+        font-size: 1.2rem;
+    }
+    .hero-section {
+        height: 40vh;
+        margin-top: 30px;
+    }
+
+    /* BOTTOM Section Adjustments */
+    .bottom-section {
+        margin-top: 5rem;
+    }
+    .man-container {
+        padding-bottom: 20px;
+    }
+    
+    .inner-content-padding {
+        padding: 20px !important;
+    }
+
+    /* Left and Right column radii adjustments for stacking */
+    .left-col, .right-col {
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    .left-col {
+        padding-left: 15px;
+        padding-top: 20px;
+    }
+
+    /* Stats Item Adjustments */
+    .stat-item {
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .stat-number {
+        font-size: 2rem;
+    }
+    .stat-icon {
+        font-size: 1.5rem;
+        margin-right: 10px !important;
+        margin-left: 10px;
+    }
+    .fa-layer-group, .fa-briefcase, .fa-face-smile, .fa-award {
+        margin-right: 0 !important;
+    }
+}
+
+
+/* Small devices (landscape phones, 576px and up, up to 767.98px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    /* Hide background icons */
+    #icon-css3, #icon-coreldraw, #icon-figma-again {
+        display: none;
+    }
+
+    /* KEY CHANGE: SHOW the center image column on sm screens */
+    .center-col {
+        display: flex !important; /* Force display on */
+        order: -1; /* Move it to the top */
+        margin-top: 0 !important;
+        margin-bottom: 30px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .profile-image-container {
+        width: 300px; /* Tablet size */
+        height: 450px;
+        border-radius: 50% 50% 0 0 / 150px 150px 0 0;
+    }
+    .profile-img {
+        margin-top: 10rem !important; /* Adjust image position */
+    }
+
+
+    /* HEADER Adjustments */
+    .custom-header-nav .row > div {
+        text-align: center !important;
+    }
+
+    /* HERO Section Adjustments */
+    .center-content {
+        margin-top: 4rem;
+    }
+    .hero-section {
+        height: 45vh;
+    }
+    .hero-section h1 {
+        font-size: 3.5rem;
+    }
+
+    /* BOTTOM Section Adjustments */
+    .bottom-section {
+        margin-top: 7rem;
+    }
+    .man-container {
+        padding-bottom: 30px;
+    }
+    
+    .inner-content-padding {
+        padding: 30px !important;
+    }
+
+    /* Left and Right column radii adjustments for stacking */
+    .left-col, .right-col {
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+    .left-col {
+        padding-left: 30px;
+        padding-top: 30px;
+    }
+
+    /* Stats Item Adjustments */
+    .stat-item {
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .stat-icon {
+        margin-right: 10px !important;
+        margin-left: 15px;
+    }
+    .fa-layer-group, .fa-briefcase, .fa-face-smile, .fa-award {
+        margin-right: 0 !important;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up, up to 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Hide background icons */
+    #icon-css3, #icon-coreldraw, #icon-figma-again {
+        display: none;
+    }
+    
+    /* SHOW the center image column on md screens */
+    .center-col {
+        display: flex !important;
+        order: -1; /* Move image to the top for stacking */
+        margin-top: 0 !important;
+        margin-bottom: 30px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .profile-image-container {
+        /* Tablet size */
+        width: 300px;
+        height: 450px;
+        border-radius: 50% 50% 0 0 / 150px 150px 0 0;
+    }
+    .profile-img {
+        margin-top: 10rem !important;
+    }
+
+    /* HEADER Adjustments (Bootstrap handles most of this, ensuring no text overflow) */
+    .header-center-col {
+        margin-top: 10px;
+    }
+    .header-nav-col, .header-center-col, .header-social-col {
+        text-align: center !important;
+        margin-bottom: 10px;
+    }
+
+    /* HERO Section Adjustments */
+    .hero-section {
+        height: 40vh;
+    }
+    .center-content {
+        padding: 35px 35px;
+        margin-top: 4rem;
+    }
+    .hero-section h1 {
+        font-size: 3.8rem;
+    }
+
+    /* BOTTOM Section Adjustments */
+    .bottom-section {
+        margin-top: 8rem;
+    }
+    .man-container {
+        padding-bottom: 40px;
+    }
+
+    /* Left and Right columns stacked below the image */
+    .left-col, .right-col {
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+    .right-col {
+        margin-bottom: 0;
+    }
+    .left-col {
+        padding-left: 15px;
+        padding-top: 20px;
+    }
+    
+    .inner-content-padding {
+        padding: 30px !important;
+    }
+
+    /* Stats Item Adjustments */
+    .stat-item {
+        justify-content: flex-start;
+    }
+    .stat-icon {
+        margin-right: 15px !important;
+        margin-left: 0;
+    }
+    .fa-layer-group, .fa-briefcase, .fa-face-smile, .fa-award {
+        margin-right: 0 !important;
+    }
+}
+
+
+/* Large devices (desktops, 992px and up) and Extra Large (1200px and up) */
+@media (min-width: 992px) {
+    /* Ensure the center column is visible and positioned for desktop */
+    .center-col {
+        display: flex !important;
+        order: 0; /* Normal order */
+        margin-top: -150px !important;
+        /* Original desktop overlap */
+        margin-bottom: 0 !important;
+        width: auto;
+        justify-content: center;
+    }
+    .profile-image-container {
+        /* Revert to desktop size */
+        width: 380px;
+        height: 520px;
+        border-radius: 50% 50% 0 0 / 180px 180px 0 0;
+    }
+    .profile-img {
+        /* Revert to desktop size */
+        margin-top: 12rem !important;
+    }
+
+
+    /* Re-apply desktop-specific border radii for the three-column layout */
+    .left-col {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        /* Re-apply original padding for left column */
+        padding-left: 60px;
+        padding-top: 20px;
+    }
+    .right-col {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+    /* Revert inline large margins on icons for the desired effect */
+    .stat-icon {
+        margin-right: 10rem !important; 
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Large devices (desktops, 992px and up) and Extra Large (1200px and up) */
+@media (min-width: 992px) {
+    /* Revert specific tablet adjustments for desktop layout */
+    .center-col {
+        margin-top: -150px;
+        /* Original desktop overlap */
+    }
+
+    /* Re-apply desktop-specific border radii for the three-column layout */
+    .left-col {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        /* Re-apply original padding for left column */
+        padding-left: 60px;
+        padding-top: 20px;
+    }
+    .right-col {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+    /* Revert inline large margins on icons for the desired effect */
+    .stat-icon {
+        margin-right: 10rem !important; 
+        /* Re-apply the specific, unusual margin from the original HTML */
+    }
+}
+
+
+
+@media (max-width: 991px) {
+    /* Section heights */
+    .contact-quote-section, 
+    .contact-left-col, 
+    .contact-right-col {
+        min-height: auto;
+    }
+
+    /* Right Column adjustments */
+    .contact-right-col {
+        padding: 80px 50px;
+        order: 1;
+        text-align: center;
+        display: block; 
+    }
+
+    .contact-content-box {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-heading { 
+        font-size: 1rem;
+    }
+
+    /* Left Column adjustments */
+    .contact-left-col {
+        order: 2;
+        padding: 50px 0;
+        background-color: var(--dark-bg);
+    }
+
+    /* --- Quote Circle Adjustments (Tablet/Desktop) --- */
+    .quote-circle-wrapper {
+        position: static; 
+        transform: none;
+        width: 90%; 
+        height: auto;
+        max-width: 450px; 
+        margin: 0 auto; 
+        border-radius: 20px; 
+        box-shadow: none;
+    }
+    
+    .quote-circle {
+        padding: 40px; /* Text ko space dene ke liye */
+    }
+    
+    /* Font Size Reductions (Forcefully for clear visibility) */
+    .circle-title {
+        font-size: 1rem !important; /* H3 title ka size aur chhota kiya (1rem) */
+        line-height: 1.4;
+    }
+    
+    .circle-text {
+        font-size: 0.8rem !important; /* Paragraph text ka size aur chhota kiya (0.8rem) */
+    }
+
+    .contact-link {
+        font-size: 0.85rem !important; /* Email link ka size aur chhota kiya */
+        display: inline-block;
+    }
+    
+    .circle-title, .circle-text, .contact-link {
+        color: var(--section-secondary-text); 
+    }
+    
+    /* Button Padding Adjustment (for Let's Work Together) */
+    .button-1 { 
+        padding-block: 10px !important; 
+        padding-inline: 25px !important;
+    }
+}
+
+
+/* --- B. Mobile Phones (max-width: 767px) --- */
+@media (max-width: 767px) {
+    /* Right Column padding aur kam karein */
+    .contact-right-col {
+        padding: 60px 20px;
+    }
+
+    /* Headings aur kam karein */
+    .main-heading h3{
+        font-size: 0.8rem;
+    }
+    
+    /* Tag line items mein margin adjust karein */
+    .tag-item {
+        margin-right: 10px;
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+    
+    /* Quote Circle wrapper ka max-width kam karein */
+    .quote-circle-wrapper {
+        max-width: 90%;
+    }
+    
+    .quote-circle {
+        padding: 30px 30px;
+    }
+    
+  
+}
+
+
+/* --- New Media Query for Extra Large Screens (e.g., 1400px and above) --- */
+@media (min-width: 1400px) {
+    
+    /* Control the maximum size of the circle */
+    .quote-circle-wrapper {
+        /* Set a fixed maximum width/height to stop excessive scaling */
+        width: 550px; 
+        height: 550px;
+        max-width: none; /* Override the smaller max-width */
+        max-height: none; /* Override the smaller max-height */
+
+        /* Adjust the absolute position to control the overlap */
+        /* right: -40%; */ 
+        /* Use a fixed value for right position to prevent excessive movement */
+        right: -230px; /* Example value: Adjust this number (e.g., -150px to -250px) 
+                           until the circle's edge is where you want it to be */
+    }
+    
+    /* You might need to adjust padding on the right column too if the circle is too close */
+    .contact-right-col {
+        padding-left: 250px; /* Ensure content is pushed further right */
+    }
+}
+/* ================================================= */
+/* === MEDIA QUERY: LARGE DESKTOP (Min 1400px) === */
+/* Targets 1400px and all larger screens for optimal layout */
+/* ================================================= */
+@media (min-width: 1400px) {
+    
+    /* --- Bottom Section (Biography, Image, Stats) --- */
+    .bottom-section .custom-row {
+        /* Use Flexbox for precise control over the alignment and spacing */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* LEFT COLUMN (Biography/Services) */
+    .bottom-section .left-col {
+        /* Give equal spacing to left and right columns (e.g., 30% each) */
+        width: 30%; 
+        /* Reset any conflicting Bootstrap column width if necessary */
+        flex-grow: 0; 
+        
+        /* Adjust padding to pull content slightly closer to the image */
+        padding-left: 40px !important;
+    }
+
+    .bottom-section .left-col .inner-content-padding {
+        /* Adjust the inner content padding to align text block */
+        padding-left: 20px !important; 
+    }
+
+    /* CENTER COLUMN (Image) */
+    .bottom-section .center-col {
+        /* Allocate space for the image (e.g., 40%) */
+        width: 40%; 
+        display: flex !important; /* Ensure image is visible and flex aligns it */
+        justify-content: center; /* Center the image container horizontally */
+    }
+
+    .profile-image-container {
+        /* Image itself will be centered inside center-col */
+        margin-top: 5rem !important; /* Restore the original top margin for spacing */
+    }
+
+    /* RIGHT COLUMN (Stats) */
+    .bottom-section .right-col {
+        /* Give equal spacing to left and right columns (e.g., 30% each) */
+        width: 30%; 
+        /* Reset any conflicting Bootstrap column width if necessary */
+        flex-grow: 0;
+    }
+
+    .bottom-section .right-col .inner-content-padding {
+        /* Adjust padding to pull content slightly closer to the image */
+        padding-right: 20px !important; 
+    }
+    
+    /* --- Footer --- */
+    /* Ensure the footer's elements are aligned well on large screens */
+    .footer-year {
+        text-align: right !important;
+    }
+}
