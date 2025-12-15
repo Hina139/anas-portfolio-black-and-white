@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anas - Contact Form with Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+    
+        :root {
+            --primary-red: #000000;
+            --dark-bg: #f5efef;
+            --text-color: #ffffff;
+            --secondary-text-color: #bbbbbb;
+            --box-bg: rgba(0, 0, 0, 0.7);
+
+            /* Header/Nav Colors (From Your Original Code) */
+            --header-bg: #eeeeee;
+            --header-text: #333333;
+            --header-secondary-text: #666666;
+        }
+
+   
+
+   
+      
+
+        .contact-section-dark {
+            /* Navbar height adjustment */
+            padding-top: 150px; 
+            padding-bottom: 80px;
+          
+            color: var(--text-color);
+            min-height: 100vh;
+            margin-top: -2rem;
+        }
+
+        .contact-form-card {
+            background-color: white; 
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s ease-in-out;
+            height: 100%; 
+        }
+
+        /* Card Hover Effect */
+        .contact-form-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        .contact-form-card h2 {
+            color: black;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .form-label-custom {
+            color: black;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        /* Input Field Styling */
+        .form-control-custom {
+            background-color: rgba(26, 24, 24, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color:black;
+            padding: 12px 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control-custom::placeholder {
+            color: rgb(104, 101, 101);
+        }
+
+        /* Input Focus/Glow Effect */
+        .form-control-custom:focus {
+            background-color: rgba(0, 0, 0, 0.15);
+            border-color: var(--primary-red);
+            box-shadow: 0 0 0 0.25rem rgba(5, 5, 5, 0.3); 
+            color: black;
+        }
+
+        /* Red Button Styling */
+        .btn-primary-red {
+            background-color: black;
+            border-color: var(--primary-red);
+            color: black;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        /* Button Hover Effect */
+        .btn-primary-red:hover {
+            background-color: #242424; 
+            border-color: #504f4f;
+            color:black;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(10, 10, 10, 0.4);
+        }
+
+        /* Contact Info Column Styling */
+        .contact-info-col {
+            padding: 40px 20px;
+        }
+
+        .contact-info-col h3 {
+            color: black;
+            font-weight: 600;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--primary-red);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        
+        /* Info Item Background Hover Effect */
+        .info-item:hover {
+            background-color: rgba(255, 255, 255, 0.05); 
+        }
+
+        .info-icon-wrapper {
+            background-color: rgb(44, 44, 44);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            margin-right: 15px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        /* Info Icon Hover Effect */
+        .info-item:hover .info-icon-wrapper {
+            background-color: #000000;
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .info-details .label {
+            color: black;
+            font-size: 0.9rem;
+            display: block;
+        }
+
+        .info-details .value {
+            color: rgb(108, 108, 108);
+            font-weight: 500;
+        }
+
+        /* --- Media Queries for Responsiveness --- */
+
+    /* 991px aur us se chote devices ke liye (Large Tablets / Laptops se chote) */
+    @media (max-width: 991px) {
+        
+        /* Header ke columns ko stack hone par center karna */
+        .custom-header-nav .row > div {
+            text-align: center !important;
+        }
+
+        /* Nav links, name/title, aur social icons ke beech space dalna */
+        .header-nav-col, .header-social-col {
+            margin-bottom: 10px;
+        }
+
+        /* Name aur Title ko mobile view mein sabse upar karna */
+        .header-center-col {
+            order: -1; 
+            margin-bottom: 15px !important;
+        }
+        
+        /* Header ke stack hone ke baad content ko neeche dhakelna */
+        .contact-section-dark {
+            padding-top: 180px; /* Taller stacked header ko clear karne ke liye */
+            padding-bottom: 40px;
+        }
+        
+        /* Form card padding kam karna */
+        .contact-form-card {
+            padding: 30px; 
+        }
+
+        /* Form aur Contact Info column ke beech space dena jab wo stack hon */
+        .contact-info-col {
+            margin-top: 20px; 
+        }
+        
+        /* Headings choti karna */
+        .contact-form-card h2 {
+            font-size: 1.8rem;
+        }
+    }
+
+    /* 575px aur us se chote devices ke liye (Mobile Phones) */
+    @media (max-width: 575px) {
+        
+        /* Header mein thoda kam padding */
+        .custom-header-nav .container {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Main section padding adjust karna */
+        .contact-section-dark {
+            padding-top: 200px; /* Sabse chote screens ke liye zyada padding */
+            min-height: auto; 
+        }
+        
+        /* Sabse bade heading ko chota karna */
+        .contact-section-dark h2 {
+             font-size: 2rem; 
+        }
+
+        /* Form card ke andar ki padding kam karna */
+        .contact-form-card {
+            padding: 20px; 
+        }
+
+        /* Form title ko chota karna */
+        .contact-form-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Info items mein space kam karna */
+        .info-item {
+            padding: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Info icon ko chota karna */
+        .info-icon-wrapper {
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+        }
+        
+        /* Button ko thoda chota karna */
+        .btn-primary-red {
+            padding: 10px 20px;
+            font-size: 0.95rem;
+        }
+    }
+    </style>
+</head>
+<body>
+
+    <header class="custom-header-nav fixed-top"  style="background-color: #ffffff;">
+        <div class="container py-3">
+            <div class="row align-items-center">
+
+                <div class="col-lg-4 col-md-12 mb-2 mb-lg-0 header-nav-col text-center text-lg-start">
+                    <a href="index.html#home" class="header-link">Home</a>
+                    <a href="index.html#about" class="header-link">About</a>
+                    <a href="index.html#project" class="header-link">Projects</a>
+                    <a href="index.html#services" class="header-link">Services</a>
+                    <a href="index.html#contact" class="header-link active">Contact</a> 
+                </div>
+
+                <div id="home" class="col-lg-4 col-md-12 mb-2 mb-lg-0 text-center header-center-col">
+                   <a href="index.html" style="text-decoration: none;"> <p class="header-name">Muhammad Anas</p></a>
+                    <p class="header-title">Web Developer</p>
+                </div>
+
+                <div class="col-lg-4 col-md-12 text-center text-lg-end header-social-col">
+                    <a href="#"><i class="fab fa-facebook-f header-social-icon"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p header-social-icon"></i></a>
+                    <a href="#"><i class="fab fa-twitter header-social-icon"></i></a>
+                    <a href="#"><i class="fab fa-envelope header-social-icon"></i></a>
+                    <a href="#"><i class="fas fa-link header-social-icon"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <section class="contact-section-dark" id="contact">
+        <div class="container">
+            <h2 class="text-center mb-5" style="color: var(--primary-red); font-size: 2.5rem; font-weight: 700;">
+                <i class="fas fa-handshake me-2"></i> Let's Connect!
+            </h2>
+            
+            <div class="row justify-content-center g-4">
+                
+                <div class="col-lg-7">
+                    <div class="contact-form-card">
+                        <h2 class="text-center">Send Me A Message</h2>
+                        <form action="#" method="POST">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="contactName" class="form-label-custom">Your Name</label>
+                                    <input type="text" class="form-control form-control-custom" id="contactName" placeholder="Enter your name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="contactEmail" class="form-label-custom">Your Email</label>
+                                    <input type="email" class="form-control form-control-custom" id="contactEmail" placeholder="Enter your email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="contactSubject" class="form-label-custom">Subject</label>
+                                <input type="text" class="form-control form-control-custom" id="contactSubject" placeholder="What's the topic?" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="contactMessage" class="form-label-custom">Message</label>
+                                <textarea class="form-control form-control-custom" id="contactMessage" rows="5" placeholder="Write your message here..." required></textarea>
+                            </div>
+                            
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary-red">
+                                    Send Message <i class="fas fa-paper-plane ms-2"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="contact-form-card contact-info-col">
+                        <h3>Contact Information</h3>
+                        
+                        <div class="info-item">
+                            <div class="info-icon-wrapper">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-details">
+                                <span class="label">Location</span>
+                                <span class="value">Quaid Abad Karachi, Pakistan</span>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon-wrapper">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-details">
+                                <span class="label">Email Address</span>
+                               <a href="ronixsoftware@gmail.com" style="text-decoration: none;"> <span class="value">anas.web.dev@example.com</span></a>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon-wrapper">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="info-details">
+                                <span class="label">Phone Number</span>
+                                <span class="value">+92 12345678911</span>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon-wrapper">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="info-details">
+                                <span class="label">WhatsApp</span>
+                                <span class="value">+92 12345678911</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
